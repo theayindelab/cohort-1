@@ -1,6 +1,6 @@
 [build]
   command = "npm run netlify-build"
-  publish = ".next"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "20.11.1"
@@ -12,4 +12,12 @@
   included_files = ["package.json"]
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs" 
+  package = "@netlify/plugin-nextjs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin" 
