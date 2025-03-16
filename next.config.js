@@ -5,6 +5,16 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    optimizeCss: true,
+    legacyBrowsers: false,
+  },
 };
 
 module.exports = nextConfig; 
