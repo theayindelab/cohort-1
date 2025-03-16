@@ -9,7 +9,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "netlify-build": "npm ci && next build"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
