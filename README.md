@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AYINDE Lab Website
+
+## Overview
+The official website for the AYINDE Lab, showcasing our research in human-AI learning integration and educational technology innovation. Built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+- 🎓 **Cohort Showcase**: Detailed profiles of our research team and their specializations
+- 🔬 **Research Areas**: In-depth exploration of our key research focuses
+  - Human-AI Synergy
+  - Personalized Computational Models
+  - Collaborative Scientific Innovation
+- 📅 **Events**: Upcoming events and demonstrations
+- 🤝 **Industry Partnerships**: Collaboration with Microsoft and NVIDIA
+- 📫 **Newsletter Integration**: Direct connection to our Substack newsletter
+- 💝 **Support Options**: Various ways to support our research
+
+## Tech Stack
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: Custom React components
+- **Deployment**: Vercel
+- **Newsletter**: Substack integration
+
+## Project Structure
+```
+src/
+├── app/
+│   ├── components/    # Reusable UI components
+│   ├── cohort/       # Team member profiles
+│   ├── research/     # Research areas
+│   ├── contact/      # Contact form
+│   └── page.tsx      # Homepage
+├── public/           # Static assets
+└── styles/          # Global styles
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18.17 or later
+- npm or yarn
 
+### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/theayindelab/cohort-1.git
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
+We welcome contributions from the community! Please read our contributing guidelines before submitting pull requests.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact
+- **Lab Director**: Vihaan Nama
+- **Email**: [Contact Form](https://theayindelab.com/contact)
+- **LinkedIn**: [AYINDE Lab](https://www.linkedin.com/company/ayinde-lab)
 
-## Learn More
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+- Microsoft Research
+- NVIDIA Research
+- All our research team members and contributors

@@ -1,13 +1,27 @@
+/**
+ * ProfileModal Component
+ * 
+ * A modal component for displaying detailed information about team members.
+ * Includes:
+ * - Name and role
+ * - Professional bio
+ * - Research interests
+ * - LinkedIn profile link
+ * 
+ * The modal is controlled through isOpen and onClose props for visibility management.
+ */
+
 'use client';
 
+// TypeScript interface for component props
 interface ProfileModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  name: string;
-  role: string;
-  linkedIn?: string;
-  researchInterests: string[];
-  bio?: string;
+  isOpen: boolean;              // Controls modal visibility
+  onClose: () => void;         // Function to handle modal closing
+  name: string;                // Team member's name
+  role: string;                // Team member's role/position
+  linkedIn?: string;           // Optional LinkedIn profile URL
+  researchInterests: string[]; // Array of research interests
+  bio?: string;                // Optional biography text
 }
 
 export default function ProfileModal({
@@ -19,12 +33,15 @@ export default function ProfileModal({
   researchInterests,
   bio,
 }: ProfileModalProps) {
+  // Early return if modal should be hidden
   if (!isOpen) return null;
 
   return (
+    // Modal overlay with semi-transparent background
     <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg max-w-2xl w-full mx-4 overflow-hidden">
         <div className="p-6">
+          {/* Header section with name, role, and close button */}
           <div className="flex justify-between items-start">
             <div>
               <h3 className="text-2xl font-bold text-gray-900">{name}</h3>
@@ -41,6 +58,7 @@ export default function ProfileModal({
             </button>
           </div>
 
+          {/* Biography section - conditionally rendered */}
           {bio && (
             <div className="mt-6">
               <h4 className="text-lg font-semibold text-gray-900">About</h4>
@@ -48,6 +66,7 @@ export default function ProfileModal({
             </div>
           )}
 
+          {/* Research interests section with bullet points */}
           <div className="mt-6">
             <h4 className="text-lg font-semibold text-gray-900">Research Interests</h4>
             <ul className="mt-2 space-y-2">
@@ -62,6 +81,7 @@ export default function ProfileModal({
             </ul>
           </div>
 
+          {/* LinkedIn profile link - conditionally rendered */}
           {linkedIn && (
             <div className="mt-6">
               <h4 className="text-lg font-semibold text-gray-900">Connect</h4>

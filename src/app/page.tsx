@@ -1,16 +1,27 @@
+/**
+ * Home Page Component
+ * 
+ * The main landing page for the AYINDE Lab website. This component includes:
+ * - Hero section with lab introduction
+ * - Upcoming events section
+ * - Research areas overview
+ * - Newsletter subscription and support sections
+ */
+
 import Image from "next/image";
 import DonateButton from "./components/DonateButton";
 
 export default function Home() {
   return (
     <div className="min-h-screen font-sans">
-      {/* Hero Section */}
+      {/* Hero Section - Main introduction to the lab */}
       <div className="bg-gradient-to-r from-teal-500 to-blue-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 font-display">
             Welcome to 
             <span className="block mt-2">AYINDE Lab</span>
           </h1>
+          {/* Lab description and mission statement */}
           <div className="mt-6 text-xl max-w-3xl space-y-4">
             <p className="font-medium">
               At the AYINDE Lab, we live at the intersection of two exciting fields:
@@ -22,6 +33,7 @@ export default function Home() {
             <p className="mt-6 font-medium">
               Our mission? To revolutionize education through this unique convergence of technology and human understanding.
             </p>
+            {/* Call to action with donation button */}
             <div className="mt-8 flex items-center justify-start space-x-4">
               <span className="text-white/80">Join us in shaping the future of education</span>
               <DonateButton variant="white" />
@@ -30,9 +42,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Upcoming Events */}
+        {/* Upcoming Events Section - Displays next lab events */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-8 font-display">Upcoming Events</h2>
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -53,10 +65,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Research Areas Preview */}
+        {/* Research Areas Preview - Overview of main research focuses */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-8 font-display">Research Areas</h2>
           <div className="grid grid-cols-1 gap-8">
+            {/* Human-AI Synergy Research Area */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 font-display">Human-AI Synergy</h3>
@@ -66,6 +79,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Personalized Computational Models Research Area */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 font-display">Personalized Computational Models</h3>
@@ -75,6 +89,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Collaborative Scientific Innovation Research Area */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 font-display">Collaborative Scientific Innovation</h3>
@@ -90,9 +105,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Newsletter and Support Section */}
+        {/* Newsletter and Support Section - Split section for engagement */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* Newsletter */}
+          {/* Newsletter Subscription */}
           <div className="bg-gradient-to-r from-teal-500 to-blue-500 rounded-2xl shadow-xl overflow-hidden">
             <div className="px-8 py-12 text-center">
               <div className="mx-auto">
