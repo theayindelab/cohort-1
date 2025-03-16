@@ -10,8 +10,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf .next out node_modules/.cache",
-    "netlify-build": "npm ci && npm run clean && npm run build"
+    "clean": "if exist .next rmdir /s /q .next && if exist out rmdir /s /q out && if exist node_modules\\.cache rmdir /s /q node_modules\\.cache",
+    "netlify-build": "npm ci && npm run clean && npm run build",
+    "serve": "next start -p 3000"
   },
   "dependencies": {
     "@netlify/functions": "^2.6.0",
