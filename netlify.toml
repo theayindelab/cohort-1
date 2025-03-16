@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "20.11.1"
   NEXT_USE_NETLIFY_EDGE = "true"
+  GO_IMPORT_PATH = ""
+  GO_VERSION = "0"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs" 
